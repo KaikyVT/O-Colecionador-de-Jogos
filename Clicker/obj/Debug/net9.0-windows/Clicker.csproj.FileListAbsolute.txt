@@ -1,0 +1,16 @@
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\bin\Debug\net9.0-windows\Clicker.exe
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\bin\Debug\net9.0-windows\Clicker.deps.json
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\bin\Debug\net9.0-windows\Clicker.runtimeconfig.json
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\bin\Debug\net9.0-windows\Clicker.dll
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\bin\Debug\net9.0-windows\Clicker.pdb
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\Clicker.Form1.resources
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\Clicker.csproj.GenerateResource.cache
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\Clicker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\Clicker.AssemblyInfoInputs.cache
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\Clicker.AssemblyInfo.cs
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\Clicker.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\Clicker.dll
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\refint\Clicker.dll
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\Clicker.pdb
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\Clicker.genruntimeconfig.cache
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\ref\Clicker.dll
