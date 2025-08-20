@@ -4,7 +4,10 @@ namespace Clicker
 {
     public partial class Form1 : Form
     {
-        private int _NumJogos = 10000;
+        Form2 f;
+
+        private int _NumJogos = 100;
+        public int GetNumJogos() => _NumJogos;
 
         private int _ValorRoubarFita = 100;
         private int _MultRoubarFita = 0;
@@ -22,7 +25,8 @@ namespace Clicker
         {
             InitializeComponent();
             NumJogos.Text = _NumJogos.ToString();
-
+            f = new(this);
+            f.AtualizarTexto();
             RoubarFita.Text = $"Roubar Fita do amiguinho \n({_ValorRoubarFita} jogos)";
             ProgressoRoubaFita.Minimum = 0;
             ProgressoRoubaFita.Maximum = 100;
@@ -43,6 +47,14 @@ namespace Clicker
             timer.Start();
         }
 
+        private void AtualizaNumJogos()
+        {
+            NumJogos.Text = _NumJogos.ToString();
+            if (f != null && !f.IsDisposed)
+            {
+                f.AtualizarTexto();
+            }
+        }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -55,7 +67,7 @@ namespace Clicker
                 else
                 {
                     _NumJogos += 10 * _MultRoubarFita;
-                    NumJogos.Text = _NumJogos.ToString();
+                    AtualizaNumJogos();
                     ProgressoRoubaFita.Value = 0; // reseta o progresso
                 }
             }
@@ -69,7 +81,7 @@ namespace Clicker
                 else
                 {
                     _NumJogos += 50 * _MultPiratearLocadora;
-                    NumJogos.Text = _NumJogos.ToString();
+                    AtualizaNumJogos();
                     ProgressoPiratearLocadora.Value = 0; // reseta o progresso
                 }
             }
@@ -83,7 +95,7 @@ namespace Clicker
                 else
                 {
                     _NumJogos += 200 * _MultJogoDeepWeb;
-                    NumJogos.Text = _NumJogos.ToString();
+                    AtualizaNumJogos();
                     ProgressoJogoDeepWeb.Value = 0; // reseta o progresso
                 }
             }
@@ -92,7 +104,7 @@ namespace Clicker
         private void CompraJogo_Click(object sender, EventArgs e)
         {
             _NumJogos += 1;
-            NumJogos.Text = _NumJogos.ToString();
+            AtualizaNumJogos();
         }
 
         private void RoubarFita_Click(object sender, EventArgs e)
@@ -102,7 +114,7 @@ namespace Clicker
                 _MultRoubarFita += 1;
                 _RoubarFitaAtivo = true;
                 _NumJogos -= _ValorRoubarFita;
-                NumJogos.Text = _NumJogos.ToString();
+                AtualizaNumJogos();
                 _ValorRoubarFita += 50; // aumenta o valor para a próxima vez
                 RoubarFita.Text = $"Roubar Fita do amiguinho \n({_ValorRoubarFita} jogos)";
             }
@@ -120,7 +132,7 @@ namespace Clicker
                 _MultPiratearLocadora += 1;
                 _PiratearLocadoraAtivo = true;
                 _NumJogos -= _ValorPiratearLocadora;
-                NumJogos.Text = _NumJogos.ToString();
+                AtualizaNumJogos();
                 _ValorPiratearLocadora += 50; // aumenta o valor para a próxima vez
                 PiratearLocadora.Text = $"Piratear cartucho da locadora \n({_ValorPiratearLocadora} jogos)";
             }
@@ -137,7 +149,7 @@ namespace Clicker
                 _MultJogoDeepWeb += 1;
                 _JogoDeepWebAtivo = true;
                 _NumJogos -= _ValorJogoDeepWeb;
-                NumJogos.Text = _NumJogos.ToString();
+                AtualizaNumJogos();
                 _ValorJogoDeepWeb += 200; // aumenta o valor para a próxima vez
                 JogoDeepWeb.Text = $"Baixar jogo na Deep Web \n({_ValorJogoDeepWeb} jogos)";
             }
@@ -145,6 +157,17 @@ namespace Clicker
             {
                 MessageBox.Show($"Você precisa de pelo menos {_ValorJogoDeepWeb} jogos para Baixar Jogos da Deep Web!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void Loja_Click(object sender, EventArgs e)
+        {
+            f = new Form2(this);
+            f.Show();
+        }
+
+        private void DescLojaCofrinho_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }
