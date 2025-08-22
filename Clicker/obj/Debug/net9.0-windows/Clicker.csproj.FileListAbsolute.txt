@@ -31,3 +31,4 @@ C:\DevC\O-Colecionador-de-Jogos-main\O-Colecionador-de-Jogos-main\Clicker\obj\De
 C:\DevC\O-Colecionador-de-Jogos-main\O-Colecionador-de-Jogos-main\Clicker\obj\Debug\net9.0-windows\Clicker.genruntimeconfig.cache
 C:\DevC\O-Colecionador-de-Jogos-main\O-Colecionador-de-Jogos-main\Clicker\obj\Debug\net9.0-windows\ref\Clicker.dll
 C:\DevC\O-Colecionador-de-Jogos-main\O-Colecionador-de-Jogos-main\Clicker\obj\Debug\net9.0-windows\Clicker.Form2.resources
+C:\Users\kaiky\Desktop\estudos\POOII-main\Clicker\obj\Debug\net9.0-windows\Clicker.Form2.resources

@@ -6,20 +6,52 @@ namespace Clicker
     {
         Form2 f;
 
-        private int _NumJogos = 100;
+        private int _NumJogos = 1000000;
         public int GetNumJogos() => _NumJogos;
-
+        public void SetNumJogos(int numJogos)
+        {
+            _NumJogos = numJogos;
+            AtualizaNumJogos();
+        }
+        private int _MultNumJogos = 1;
+        public int GetMultNumJogos() => _MultNumJogos;
+        public void SetMultNumJogos(int multNumJogos)
+        {
+            _MultNumJogos = multNumJogos;
+            AtualizaNumJogos();
+        }
         private int _ValorRoubarFita = 100;
         private int _MultRoubarFita = 0;
         private bool _RoubarFitaAtivo = false;
+        private int _MaxBarraRoubarFita = 100;
+        public int GetMaxBarraRoubarFita() => _MaxBarraRoubarFita;
+        public void SetMaxBarraRoubarFita(int maxBarraRoubarFita)
+        {
+            _MaxBarraRoubarFita = maxBarraRoubarFita;
+            ProgressoRoubaFita.Maximum = _MaxBarraRoubarFita;
+        }
 
         private int _ValorPiratearLocadora = 500;
         private int _MultPiratearLocadora = 0;
         private bool _PiratearLocadoraAtivo = false;
+        private int _MaxBarraPiratearLocadora = 200;
+        public int GetMaxBarraPiratearLocadora() => _MaxBarraPiratearLocadora;
+        public void SetMaxBarraPiratearLocadora(int maxBarraPiratearLocadora)
+        {
+            _MaxBarraPiratearLocadora = maxBarraPiratearLocadora;
+            ProgressoPiratearLocadora.Maximum = _MaxBarraPiratearLocadora;
+        }
 
         private int _ValorJogoDeepWeb = 1000;
         private int _MultJogoDeepWeb = 0;
         private bool _JogoDeepWebAtivo = false;
+        private int _MaxBarraJogoDeepWeb = 500;
+        public int GetMaxBarraJogoDeepWeb() => _MaxBarraJogoDeepWeb;
+        public void SetMaxBarraJogoDeepWeb(int maxBarraJogoDeepWeb)
+        {
+            _MaxBarraJogoDeepWeb = maxBarraJogoDeepWeb;
+            ProgressoJogoDeepWeb.Maximum = _MaxBarraJogoDeepWeb;
+        }
 
         public Form1()
         {
@@ -29,11 +61,11 @@ namespace Clicker
             f.AtualizarTexto();
             RoubarFita.Text = $"Roubar Fita do amiguinho \n({_ValorRoubarFita} jogos)";
             ProgressoRoubaFita.Minimum = 0;
-            ProgressoRoubaFita.Maximum = 100;
+            ProgressoRoubaFita.Maximum = _MaxBarraRoubarFita;
             ProgressoRoubaFita.Value = 0;
             PiratearLocadora.Text = $"Piratear cartucho da locadora \n({_ValorPiratearLocadora} jogos)";
             ProgressoPiratearLocadora.Minimum = 0;
-            ProgressoPiratearLocadora.Maximum = 200;
+            ProgressoPiratearLocadora.Maximum = _MaxBarraPiratearLocadora;
             ProgressoPiratearLocadora.Value = 0;
             JogoDeepWeb.Text = $"Baixar jogo da Deep Web \n({_ValorJogoDeepWeb})";
             ProgressoJogoDeepWeb.Minimum = 0;
@@ -47,7 +79,7 @@ namespace Clicker
             timer.Start();
         }
 
-        private void AtualizaNumJogos()
+        public void AtualizaNumJogos()
         {
             NumJogos.Text = _NumJogos.ToString();
             if (f != null && !f.IsDisposed)
@@ -80,7 +112,7 @@ namespace Clicker
                 }
                 else
                 {
-                    _NumJogos += 50 * _MultPiratearLocadora;
+                    _NumJogos += 70 * _MultPiratearLocadora;
                     AtualizaNumJogos();
                     ProgressoPiratearLocadora.Value = 0; // reseta o progresso
                 }
@@ -94,7 +126,7 @@ namespace Clicker
                 }
                 else
                 {
-                    _NumJogos += 200 * _MultJogoDeepWeb;
+                    _NumJogos += 150 * _MultJogoDeepWeb;
                     AtualizaNumJogos();
                     ProgressoJogoDeepWeb.Value = 0; // reseta o progresso
                 }
@@ -103,7 +135,7 @@ namespace Clicker
 
         private void CompraJogo_Click(object sender, EventArgs e)
         {
-            _NumJogos += 1;
+            _NumJogos += 1 * _MultNumJogos;
             AtualizaNumJogos();
         }
 
@@ -165,9 +197,6 @@ namespace Clicker
             f.Show();
         }
 
-        private void DescLojaCofrinho_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
+       
     }
 }

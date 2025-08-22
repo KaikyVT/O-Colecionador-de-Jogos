@@ -44,9 +44,9 @@
             // 
             Jogos.AutoSize = true;
             Jogos.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Jogos.Location = new Point(276, 7);
+            Jogos.Location = new Point(315, 9);
             Jogos.Name = "Jogos";
-            Jogos.Size = new Size(71, 28);
+            Jogos.Size = new Size(89, 35);
             Jogos.TabIndex = 0;
             Jogos.Text = "Jogos:";
             // 
@@ -54,18 +54,17 @@
             // 
             NumJogos.AutoSize = true;
             NumJogos.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NumJogos.Location = new Point(359, 7);
+            NumJogos.Location = new Point(410, 9);
             NumJogos.Name = "NumJogos";
-            NumJogos.Size = new Size(24, 28);
+            NumJogos.Size = new Size(29, 35);
             NumJogos.TabIndex = 1;
             NumJogos.Text = "0";
             // 
             // CompraJogo
             // 
-            CompraJogo.Location = new Point(303, 55);
-            CompraJogo.Margin = new Padding(3, 2, 3, 2);
+            CompraJogo.Location = new Point(346, 73);
             CompraJogo.Name = "CompraJogo";
-            CompraJogo.Size = new Size(66, 50);
+            CompraJogo.Size = new Size(75, 67);
             CompraJogo.TabIndex = 2;
             CompraJogo.Text = "Comprar Fita";
             CompraJogo.UseVisualStyleBackColor = true;
@@ -73,10 +72,9 @@
             // 
             // RoubarFita
             // 
-            RoubarFita.Location = new Point(10, 123);
-            RoubarFita.Margin = new Padding(3, 2, 3, 2);
+            RoubarFita.Location = new Point(11, 164);
             RoubarFita.Name = "RoubarFita";
-            RoubarFita.Size = new Size(124, 72);
+            RoubarFita.Size = new Size(142, 96);
             RoubarFita.TabIndex = 3;
             RoubarFita.Text = "Roubar fita do amiguinho";
             RoubarFita.UseVisualStyleBackColor = true;
@@ -84,26 +82,23 @@
             // 
             // ProgressoRoubaFita
             // 
-            ProgressoRoubaFita.Location = new Point(10, 208);
-            ProgressoRoubaFita.Margin = new Padding(3, 2, 3, 2);
+            ProgressoRoubaFita.Location = new Point(11, 277);
             ProgressoRoubaFita.Name = "ProgressoRoubaFita";
-            ProgressoRoubaFita.Size = new Size(124, 22);
+            ProgressoRoubaFita.Size = new Size(142, 29);
             ProgressoRoubaFita.TabIndex = 4;
             // 
             // ProgressoPiratearLocadora
             // 
-            ProgressoPiratearLocadora.Location = new Point(171, 208);
-            ProgressoPiratearLocadora.Margin = new Padding(3, 2, 3, 2);
+            ProgressoPiratearLocadora.Location = new Point(195, 277);
             ProgressoPiratearLocadora.Name = "ProgressoPiratearLocadora";
-            ProgressoPiratearLocadora.Size = new Size(124, 22);
+            ProgressoPiratearLocadora.Size = new Size(142, 29);
             ProgressoPiratearLocadora.TabIndex = 6;
             // 
             // PiratearLocadora
             // 
-            PiratearLocadora.Location = new Point(171, 123);
-            PiratearLocadora.Margin = new Padding(3, 2, 3, 2);
+            PiratearLocadora.Location = new Point(195, 164);
             PiratearLocadora.Name = "PiratearLocadora";
-            PiratearLocadora.Size = new Size(124, 72);
+            PiratearLocadora.Size = new Size(142, 96);
             PiratearLocadora.TabIndex = 5;
             PiratearLocadora.Text = "Piratear cartucho da locadora";
             PiratearLocadora.UseVisualStyleBackColor = true;
@@ -111,18 +106,16 @@
             // 
             // ProgressoJogoDeepWeb
             // 
-            ProgressoJogoDeepWeb.Location = new Point(339, 208);
-            ProgressoJogoDeepWeb.Margin = new Padding(3, 2, 3, 2);
+            ProgressoJogoDeepWeb.Location = new Point(387, 277);
             ProgressoJogoDeepWeb.Name = "ProgressoJogoDeepWeb";
-            ProgressoJogoDeepWeb.Size = new Size(124, 22);
+            ProgressoJogoDeepWeb.Size = new Size(142, 29);
             ProgressoJogoDeepWeb.TabIndex = 8;
             // 
             // JogoDeepWeb
             // 
-            JogoDeepWeb.Location = new Point(339, 123);
-            JogoDeepWeb.Margin = new Padding(3, 2, 3, 2);
+            JogoDeepWeb.Location = new Point(387, 164);
             JogoDeepWeb.Name = "JogoDeepWeb";
-            JogoDeepWeb.Size = new Size(124, 72);
+            JogoDeepWeb.Size = new Size(142, 96);
             JogoDeepWeb.TabIndex = 7;
             JogoDeepWeb.Text = "Baixar Jogos da Deep Web";
             JogoDeepWeb.UseVisualStyleBackColor = true;
@@ -130,9 +123,10 @@
             // 
             // Loja
             // 
-            Loja.Location = new Point(603, 36);
+            Loja.Location = new Point(689, 48);
+            Loja.Margin = new Padding(3, 4, 3, 4);
             Loja.Name = "Loja";
-            Loja.Size = new Size(75, 23);
+            Loja.Size = new Size(86, 31);
             Loja.TabIndex = 9;
             Loja.Text = "Loja";
             Loja.UseVisualStyleBackColor = true;
@@ -140,9 +134,9 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 632);
+            ClientSize = new Size(800, 843);
             Controls.Add(Loja);
             Controls.Add(ProgressoJogoDeepWeb);
             Controls.Add(JogoDeepWeb);
@@ -153,7 +147,6 @@
             Controls.Add(CompraJogo);
             Controls.Add(NumJogos);
             Controls.Add(Jogos);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Colecionador de Jogos";
             ResumeLayout(false);
